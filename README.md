@@ -8,9 +8,10 @@
 
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/Bluuubery"><img src="https://avatars.githubusercontent.com/u/109324637?v=4?s=100" width="100px;" alt=""/><br /><sub><b>석지명</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/1109code"><img src="https://avatars.githubusercontent.com/u/109256753?v=4?s=100" width="100px;" alt=""/><br /><sub><b>김중광</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/oju0"><img src="https://avatars.githubusercontent.com/u/109325578?v=4?s-100" width="100px;" alt=""/><br /><sub><b>백진규</b></sub></a><br /></td>   
+    <td align="center"><a href="https://github.com/hyunsoo10"><img src="https://avatars.githubusercontent.com/u/139304756?v=4" width="100px;" alt=""/><br /><sub><b>조현수</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/jseok0917"><img src="https://avatars.githubusercontent.com/u/139304962?v=4" width="100px;" alt=""/><br /><sub><b>석지명</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/kimjungkwang1"><img src="https://avatars.githubusercontent.com/u/134460604?v=4" width="100px;" alt=""/><br /><sub><b>김중광</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/qorwlsrb01"><img src="https://avatars.githubusercontent.com/u/139304778?v=4" width="100px;" alt=""/><br /><sub><b>백진규</b></sub></a><br /></td>   
   </tr>
 </table>
 
@@ -19,6 +20,7 @@
 - 혼자 풀기 어려운 알고리즘을 같이 풀이 해보기
 - 자주 나오는 알고리즘 유형에 대한 다양한 풀이 방식을 통해 문제 해결 능력 향상
 - 같은 목표를 갖고 모두가 **WIN-WIN**
+- SW역량 테스트 시험 B형 취득
 
 ## 3. 일정
 ### 📅 기간
