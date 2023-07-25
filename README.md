@@ -57,13 +57,14 @@
 
 ```bash
 < ssafy_algoriithm_study >
-	1. 1주차 알고리즘 # 스터디 주차별 폴더
-		1주차_문제이름_조현수.class/				
+	1. 01_WEEK_SWEA( BAEK || PROGRAMERS ) # 스터디 주차별 폴더
+        주차_사이트이름_문제번호_이름이니셜+성.java
+		01_SWEA_1859_hscho.java/				
 		1주차_문제이름_석지명.class/
         1주차_문제이름_김중광.class/
         1주차_문제이름_백진규.class/
 
-    2. 2주차 알고리즘 
+    2. 02_WEEK_SWEA( BAEK || PROGRAMERS )
 		2주차_문제이름_조현수.class/				
 		2주차_문제이름_석지명.class/
         2주차_문제이름_김중광.class/
@@ -75,8 +76,9 @@
 
 **\** 모든 파일은 스터디 전날 자정까지 업로드\**
 
-- **commit 메시지** : 주차_문제이름_본인이름 (ex: 1주차_백만장자_조현수)
-- 
+- **commit 메시지** : 01_WEEK_SWEA_1859_HyunsooCho
+
+
 ### ✔ 기타 규칙
 
 - **결석비** 10,000원
