@@ -19,33 +19,33 @@ public class BAEKJOON_5430_jkkim {
 		//
 		f1:for(int i=0;i<t;i++) {
 			
-			//Ä¿¸Çµå¹Þ±â
+			//ëª…ë ¹ì–´ ë°›ì•„ì„œ ë°°ì—´ë¡œ ì €ìž¥
 			String[] p = br.readLine().split("");
-			//¹è¿­ ±æÀÌ ¹Þ±â
+			//ë°°ì—´ì˜ í¬ê¸° ë°›ìŒ
 			int n = Integer.parseInt(br.readLine());
-			//¹è¿­ ¹Þ°í µ¦¿¡ Ãß°¡
+			//ë°°ì—´ì„ ë°›ì•„ ì €ìž¥
 			String str =br.readLine();
 			String[] arr = str.substring(1, str.length()-1).split(",");
 			Deque<String> deque = new LinkedList<>();
 			for(int j =0;j<arr.length;j++) {
 				deque.add(arr[j]);
-			}//¹è¿­ ¹Þ°í µ¦¿¡ Ãß°¡
+			}//ë°°ì—´ì„ ë°›ì•„ ì €ìž¥
 			
-			// ¾ÕµÚ ¹æÇâÀ» Á¤ÇÏ´Â ÇÃ·¡±×
+			// ì•žë’¤ ë°©í–¥ì„ ì •í•˜ëŠ” í”Œëž˜ê·¸
 			boolean flag = true;
 			
-			//Ä¿¸Çµå È®ÀÎ
+			//Ä¿ï¿½Çµï¿½ È®ï¿½ï¿½
 			for(int k=0;k<p.length;k++) {
-				//ÇÃ·¡±× º¯°æ
+				//ëª…ë ¹ì–´ê°€ Rì´ë©´ í”Œëž˜ê·¸ ë³€ê²½
 				if(p[k].equals("R")) {
 					flag=!flag;
 				}else {
-					//µ¦ÀÌ ºñ¾îÀÖ°Å³ª ÃÖÃÊ¹è¿­ÀÇ ±æÀÌ°¡ 0ÀÏ¶§ D¸¦ ¼öÇàÇÏ·ÁÇÏ¸é  ¿¡·¯ Ãâ·Â
+					//ë±ì´ ë¹„ì–´ìžˆê±°ë‚˜ ìµœì´ˆ ë°°ì—´ì˜ ê¸¸ì´ê°€ 0ì¼ë•Œ Dë¥¼ ìˆ˜í–‰í•˜ë ¤í•˜ë©´ ì—ëŸ¬ ìž‘ì„±
 					if(deque.isEmpty()||n==0) {
 						bw.write("error\n");
 						continue f1;
 					}else {
-						//ÇÃ·¡±×¿¡µû¶ó ¾ÕµÚ°ª Á¦°Å
+						//í”Œëž˜ê·¸ì— ë”°ë¼ ì•žë’¤ì—ì„œ ì œê±°
 						if(flag) {
 							deque.pollFirst();
 						}else {
@@ -56,7 +56,7 @@ public class BAEKJOON_5430_jkkim {
 				
 			}
 			
-			//¾ç½Ä¿¡ ¸Â°Ô Ãâ·Â
+			//ì–‘ì‹ì— ë§žê²Œ ì¶œë ¥
 			if(deque.size()==0||n==0) {
 				bw.write("[");
 				bw.write("]\n");
@@ -78,7 +78,7 @@ public class BAEKJOON_5430_jkkim {
 				}
 			}
 		}
-		//Ãâ·Â¹® ¹ß¼Û
+		
 		bw.flush();
 	}
 }
