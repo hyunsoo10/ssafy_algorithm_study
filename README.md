@@ -62,18 +62,18 @@
 
 ```bash
 < ssafy_algoriithm_study >
-	1. 01_WEEK_SWEA( BAEK || PROGRAMERS ) # 스터디 주차별 폴더
-        n주차_사이트이름_문제번호_이름이니셜+성.java
-		01_SWEA_1859_hscho.java/
-        01_SWEA_1859_jmseok.jav/		
-        01_SWEA_1859_jkkim.jav/		
-        01_SWEA_1859_jkbaek.jav/
+1. 01_WEEK_SWEA( BAEK || PROGRAMERS ) # 스터디 주차별 폴더
+    n주차_사이트이름_문제번호_이름이니셜+성.java
+    01_SWEA_1859_hscho.java/
+    01_SWEA_1859_jmseok.jav/		
+    01_SWEA_1859_jkkim.jav/		
+    01_SWEA_1859_jkbaek.jav/
 
-    2. 02_WEEK_SWEA( BAEK || PROGRAMERS )
-		02_SWEA_1995_hscho.java/
-        02_SWEA_1995_jmseok.jav/		
-        02_SWEA_1995_jkkim.jav/		
-        02_SWEA_1995_jkbaek.jav/
+2. 02_WEEK_SWEA( BAEK || PROGRAMERS )
+    02_SWEA_1995_hscho.java/
+    02_SWEA_1995_jmseok.jav/		
+    02_SWEA_1995_jkkim.jav/		
+    02_SWEA_1995_jkbaek.jav/
 		
     #코드에 주석 친절하게 작성
 
