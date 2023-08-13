@@ -31,16 +31,21 @@
 ### 📚 학습 목차
 
 
-### 알고리즘
-    1. 냅색 알고리즘(DP)
-    2. 
+### 목표 알고리즘 & 자료구조
+    1. DP
+    2. BFS/DFS
+    3. 재귀
+    4. 트리
+    5. 큐
+    6. 스택
+    7. 연결리스트
 
 ## 4. 진행 방식
 
 ### 🕑 시간 및 장소
 
 - **주 1회 1시간**
-    - 매주 화요일 18시 정규 수업 종료 후 같이 저녁 식사 후 스터디룸 혹은 카페에서 진행
+    - 매주 화요일 아침 08시 수업 시작 전에 진행
 - **오프라인**으로 진행
 
 ### 📖 학습 방식
@@ -58,17 +63,17 @@
 ```bash
 < ssafy_algoriithm_study >
 	1. 01_WEEK_SWEA( BAEK || PROGRAMERS ) # 스터디 주차별 폴더
-        주차_사이트이름_문제번호_이름이니셜+성.java
-		01_SWEA_1859_hscho.java/				
-		1주차_문제이름_석지명.class/
-        1주차_문제이름_김중광.class/
-        1주차_문제이름_백진규.class/
+        n주차_사이트이름_문제번호_이름이니셜+성.java
+		01_SWEA_1859_hscho.java/
+        01_SWEA_1859_jmseok.jav/		
+        01_SWEA_1859_jkkim.jav/		
+        01_SWEA_1859_jkbaek.jav/
 
     2. 02_WEEK_SWEA( BAEK || PROGRAMERS )
-		2주차_문제이름_조현수.class/				
-		2주차_문제이름_석지명.class/
-        2주차_문제이름_김중광.class/
-        2주차_문제이름_백진규.class/
+		02_SWEA_1995_hscho.java/
+        02_SWEA_1995_jmseok.jav/		
+        02_SWEA_1995_jkkim.jav/		
+        02_SWEA_1995_jkbaek.jav/
 		
     #코드에 주석 친절하게 작성
 
