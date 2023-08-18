@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int n= sc.nextInt();// 개수 입력
+		int n= sc.nextInt();// 개수 입력 함
 		PriorityQueue<Integer> queue = new PriorityQueue<>();//우선순위큐 선언
 		int ans = 0;	//정답
 		for(int i =0;i<n;i++) {//큐에 값 하나씩 넣기
