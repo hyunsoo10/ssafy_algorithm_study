@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.PriorityQueue;
+import java.util.StringTokenizer;
 
 
 public class Main {
@@ -21,12 +22,13 @@ public class Main {
 		//내림차순
 		@Override
 		public int compareTo(Node o) {
-			return dist[o.v] - dist[this.v];
+			return o.w - this.w;
 		}
 
 		
 	}
 	
+	static final int INF = Integer.MAX_VALUE;
 	static int N, M;
 	static int[] dist;
 	
@@ -35,9 +37,9 @@ public class Main {
 	
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		String[] input = br.readLine().split(" ");
-		N = Integer.parseInt(input[0]); //섬의 수
-		M = Integer.parseInt(input[1]); //다리의 수
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		N = Integer.parseInt(st.nextToken()); //섬의 수
+		M = Integer.parseInt(st.nextToken()); //다리의 수
 		
 		//ArrayList라는 객체의 배열
 		List<Node>[] adjList = new ArrayList[N+1]; //1번마을부터 시작 //주어진 정점과 연결된 간선들을 모으고, 정점이 여러개이므로 그 배열
@@ -48,10 +50,10 @@ public class Main {
 		
 		
 		for (int i = 0; i < M; i++) {
-			String[] inputRoad = br.readLine().split(" ");
-			int A = Integer.parseInt(inputRoad[0]); //시작마을
-			int B = Integer.parseInt(inputRoad[1]); //도착마을
-			int C = Integer.parseInt(inputRoad[2]); //중량제한(가중치)
+			StringTokenizer inputRoad = new StringTokenizer(br.readLine());
+			int A = Integer.parseInt(inputRoad.nextToken()); //시작마을
+			int B = Integer.parseInt(inputRoad.nextToken()); //도착마을
+			int C = Integer.parseInt(inputRoad.nextToken()); //중량제한(가중치)
 			
 			//A마을에 도로를 추가한다
 			
@@ -61,56 +63,56 @@ public class Main {
 		
 		String[] inputTarget = br.readLine().split(" ");
 		
-		int X = Integer.parseInt(inputTarget[0]); //공장의 위치
-		int target = Integer.parseInt(inputTarget[1]); //목표 지점
+		//공장의 위치
+		int X = Integer.parseInt(inputTarget[0]); 
+		
+		//목표 지점
+		int target = Integer.parseInt(inputTarget[1]);
 		
 		
 		
 		dist = new int[N+1]; //최장중량을 저장할 배열 //기본값0
-		 // 무한대로 채워놓고
-		
-		
 		boolean[] visited = new boolean[N+1];
+
 		
 		PriorityQueue<Node> pq = new PriorityQueue<>();
 		
-		visited[X] = true;
+		//공장지점은 무한한 중량을 옮길 수 있다고 생각할 수 있음
+		dist[X] = INF;
+		pq.add(new Node(X, INF));
 		
-		for (Node e : adjList[X]){
-			dist[e.v] = e.w;
-		    
-		}
-		
-		pq.addAll(adjList[X]);
-		
-		int pick = 1;
-		
-		
-		
-		//매번 소요시간이 가장 작은 정점을 뽑으면서 모든 정점을 돌건데
-		//마지막 건 안돌아도 문제가 없으므로
-		while (pick != N-1) {
+		while (!(pq.isEmpty())) {
 			
-			if (pq.isEmpty()){
-			    break;
-			}
-
-			Node node = pq.poll(); //가장 중량제한이 큰 놈을 선택
 			
-			//다 우겨넣었기때문에 방문한 놈은 skip
-			if (visited[node.v]){
-			    continue;
+			//가장 중량제한이 큰 다리를 뽑는다.
+			Node node = pq.poll();
+			
+			//다리의 도착점을 
+			//갱신을 위한 출발섬으로 두면 된다.
+			int start = node.v; 
+			int w = node.w;
+			
+			if (visited[start]) {
+				continue;
 			}
 			
-			visited[node.v] = true; // 방문처리
-			pick++;
-			
-			//갱신
-			for (Node e : adjList[node.v]){
-			    
-			    if (!visited[e.v] && dist[e.v] < Math.min(dist[node.v], e.w)){
-			        dist[e.v] = Math.min(dist[node.v], e.w);
-			        pq.addAll(adjList[e.v]);
+			visited[start] = true;
+				
+			//start섬으로 연결된 다리들과 도착지점들에 대하여
+			//갱신을 진행한다.
+			for (Node e : adjList[start]) {
+				//도착지점으로 향하는 다리의 중량제한값과
+				//이미 갱신된 상태의 출발섬의 중량제한 값의 min이
+				//도착지점에 줄 중량제한 값이다.
+				//weight값이 도착지점에 이미 존재하는
+				//중량제한값보다 크면 갱신하고
+				//크지 않으면 이미 가치가 없는 루트이므로
+				//갱신할 필요가 없다.
+			    if (dist[e.v] < Math.min(w, e.w)){
+			        dist[e.v] = Math.min(w, e.w);
+			        //갱신이 됐을 경우
+			        //해당 경로를 가능한 최단경로지점으로 추가한다.
+			        pq.add(new Node(e.v, dist[e.v]));
 			    }
 			    
 			}
@@ -126,7 +128,7 @@ public class Main {
 		
 		
 
-		
+		br.close();
 		
 		
 	}
